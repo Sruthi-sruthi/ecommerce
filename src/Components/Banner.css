@@ -1,0 +1,21 @@
+
+.image-container{
+margin-top: 50px;
+width: 100vw;
+height: 16vh;
+display: flex;
+justify-content: space-evenly;
+background-color: white;
+text-align: center;
+box-shadow: 1px 1px 1px gray;
+
+}
+.photos{
+    width: 60px;
+    margin-top: 20px;
+}
+.product{
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 5px;
+}

@@ -1,0 +1,29 @@
+.carousal-image{
+    width: 100vw;
+    padding: 15px;
+}
+
+
+.react-multiple-carousel__arrow{
+    background: white;
+    color: black;
+    border-radius: 5px;
+    padding: 29px 2px;
+    top: 90px;
+}
+.react-multiple-carousel__arrow--right{
+    right: 0;
+}
+.react-multiple-carousel__arrow--left{
+    left: 0;
+}
+.react-multiple-carousel__arrow::before{
+    color: black;
+}
+.react-multiple-carousel__arrow:hover{
+    background: white;
+    color: black;
+    border-radius: 5px;
+    padding: 29px 2px;
+    top: 90px;
+}

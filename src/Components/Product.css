@@ -1,0 +1,16 @@
+.price{
+    color: rgb(3, 54, 3);
+    font-weight: 600;
+
+}
+.description{
+    font-weight: 800;
+}
+.single-product{
+    height: 40vh;
+}
+.sub-carousal-image{
+height: 150px;
+width: 150px;
+margin-top: 30px;
+}
