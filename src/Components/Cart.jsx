@@ -1,7 +1,11 @@
 import './Cart.css'
 import Navbar from './Navbar'
+import { DemoContext } from '../context/DemoContext';
+import { useContext } from 'react';
 
 function Cart() {
+    // const{demo}=useContext(DemoContext)
+
     return (
         <>
             <div className="cart-section">
@@ -18,12 +22,17 @@ function Cart() {
                             </div>
                             <div className="cart-details">
                                 <h5>Canon PIXMA TS207 Single Function Color Printer</h5>
-                                <p>Black, Ink Cartridge</p>
+                                <p className='clr'>Black, Ink Cartridge</p>
+                                <div className="assured-cart">
                                 <p>Seller:BUZZINDIA</p>
-                                <p>₹2,695₹2,4997% Off2 offers applied</p>
-                                <p>Out Of Stock</p>
-                                <p>SAVE FOR LATER</p>
-                                <p>REMOVE</p>
+                                <img className='ass-cart-img' src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="" />
+                                </div>
+                                <p className='offer-col'><strike>₹2,695</strike><b> ₹2,499</b><span className='offer'> 7% Off 3 offers applied</span> </p>
+                                <p className='stock'>Out Of Stock</p>
+                                <div className="save-col">
+                                <p className='save'>SAVE FOR LATER</p>
+                                <p className='remove'>REMOVE</p>
+                                </div>
                             </div>
                         </div>
                         <div className='place-order'>
@@ -43,20 +52,37 @@ function Cart() {
                         </div>
                         <div className="detail1">
                         <p>Discount</p>
-                        <p>- ₹196</p>
+                        <p><span className='free'>- ₹196</span></p>
                         </div>
                         <div className="detail1">
-                            <p>Delivery Charges</p>
-                            <p>FREE</p>
+                            <p> Delivery Charges</p>
+                            <p> <span className='free'>FREE</span></p>
                         </div>
+                        <hr className='dashed-line' />
                         <div className="detail1">
-                            <p>Total Amount</p>
-                            <p>₹2,499</p>
+                            <p><b>Total Amount</b></p>
+                            <p> <b> ₹2,499</b></p>
                         </div>
-                        <div>You will save ₹196 on this order</div>
+                        <hr className='dashed-line' />
+
+                        <div className='price-order'>You will save ₹196 on this order</div>   
                     </div>
                     </div>
                 </div>
+             
+
+
+<div className="policy">
+   <div className="policies">
+    <p>Policies:Returns Policy | Terms of use | Security | Privacy | Infringement</p>
+    <p className='copyright'>© 2007-2022 Flipkart.com</p>
+    {/* <p className='copyright'>{demo}</p> */}
+   </div>
+   <div className="help">
+   <p> Need help? Visit the <a>Help Center </a>or <a> Contact Us</a></p>
+   </div>
+</div>
+
             </div>
         </>
     )

@@ -1,0 +1,24 @@
+.form-sec{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+    
+
+}
+.form-sec input{
+    width: 350px;
+    height: 30px;
+    margin: 6px;
+}
+.seller-submit-btn{
+    width: 250px;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    background-color: green;
+    color: white;
+    border:none ;
+}

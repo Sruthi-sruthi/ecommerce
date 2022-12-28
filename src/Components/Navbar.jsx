@@ -5,16 +5,31 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import Login from './Login';
 import Signup from './Signup';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { DemoContext } from '../context/DemoContext';
+import { UserContext } from '../context/UserContext';
+
 function Navbar(){
     const[open,setopen]=useState(false)
+    const{loginuser,setloginuser}=useContext(UserContext)
+
     function openLogin(){
        setopen(true) 
     }
-
     const[signopen,setsignopen]=useState(false)
     function openSignup(){
         setsignopen(true)
     }
+
+    // const{demo,setdemo}=useContext(DemoContext)
+    // function changeDemo(){
+    //  setdemo("value changed")
+    // }
+
+    function logout(){
+    setloginuser(null)
+    }
+    
     return(
         <>
         <div className="nav">
@@ -25,16 +40,26 @@ function Navbar(){
             </p>
             </div>
         <div className="search">
-            <input className='search-input' type="text" placeholder='search for product,brands and more'/>
+            <input className='search-input' type="text" placeholder="Search for products,brands and more"/>
             <SearchIcon/>
         </div>
  
-       <button className='login' onClick={openLogin}>Login</button>
-       <Login open={open} setopen={setopen}/>
-       <button className='signup' onClick={openSignup}>signup</button>
-       <Signup signopen={signopen} setsignopen={setsignopen}/>
+       {
 
-       {/* <p className='text text1'>become seller</p> */}
+        loginuser
+         ?
+         <p>{loginuser.username}</p> 
+         :
+         <>
+        <button className='login' onClick={openLogin}>Login</button>
+        <button className='signup' onClick={openSignup}>signup</button>
+        </>
+       }
+
+
+
+       <Login open={open} setopen={setopen}/>
+       <Signup signopen={signopen} setsignopen={setsignopen}/>
 
        <p className='text'>More
        <ArrowDropDownIcon/>
@@ -42,6 +67,7 @@ function Navbar(){
        <p className='text'>
        <ShoppingCartIcon/>
         Cart</p>
+        { loginuser && <button onClick={logout}>logout</button> }
         </div>
         </>
     )

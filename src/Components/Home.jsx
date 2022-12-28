@@ -7,6 +7,8 @@ import Bankimage from './Bankimage';
 import Fashionproduct from './Fashionproduct';
 import Productitem from './Productitem';
 
+
+
 export default function Home() {
   return (
     <div> <Navbar/>

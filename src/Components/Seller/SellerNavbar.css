@@ -1,0 +1,82 @@
+*{
+    top: 0;
+}
+.seller-nav{
+    left: auto;
+    bottom: auto;
+    right: 0px; 
+    background-color: green;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 8vh;
+}
+.flip-main{
+    width: 75px;
+    height: 20px;
+    margin-top: 15px;
+}
+.star{
+    width: 10px;
+    height: 10px;
+}
+.plus{
+    color: #ffe711;
+    font-weight: 600;
+    font-style: italic;
+
+}
+.logo .explore{
+    color: white;
+    position: relative;
+    top: -15px;
+    font-style: italic;
+    font-size: 11px;
+}
+
+
+
+.logo{
+    margin-top: 10px;
+}
+.button-section{
+    display: flex;
+}
+.seller-login{
+    padding: 7px 30px;
+    font-size: 16px;
+    font-weight: 550;
+    border: none;
+    outline: none;
+    color:green;
+    background-color: white;
+}
+
+.seller-reg{
+    padding: 7px 30px;
+    font-size: 16px;
+    font-weight: 550;
+    border: none;
+    outline: none;
+    color:green;
+    background-color: white;
+    margin-left: 20px;
+    text-transform: capitalize;
+
+
+}
+.start-seller{
+    padding: 7px 30px;
+    font-size: 16px;
+    font-weight: 550;
+    border: none;
+    outline: none;
+    color:green;
+    background-color: white;
+    margin-left: 20px;
+    text-transform: capitalize;
+
+
+}

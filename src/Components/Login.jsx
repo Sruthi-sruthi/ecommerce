@@ -1,11 +1,16 @@
-import React, { useRef } from 'react'
+import React, { useContext, useRef } from 'react'
 import Dialog from '@mui/material/Dialog';
 import './Login.css'
 import { loginUser } from '../services/api';
+import { UserContext } from '../context/UserContext';
 
 function Login(props){
 const passwordRef=useRef()
 const emailRef=useRef()
+
+
+const{loginuser,setloginuser,setusertype}=useContext(UserContext)
+
 async function dologin(){
 let obj={
     email:emailRef.current.value,
@@ -15,7 +20,9 @@ console.log(obj);
 let response=await loginUser(obj)
     console.log(response.success);
     if(response.success){
-      alert(response.message)
+      alert(response.user.username)
+      setloginuser(response.user)
+      setusertype("user")
     }else{
       alert(response.message)
     }
@@ -26,7 +33,7 @@ let response=await loginUser(obj)
          <div className="main-container">
         <div className="login-container login-image">
             <p className='log'>Login</p>
-            <p className='subhead'>Get access to your Orders, Wishlist and Recommendations</p>
+            <p className='subhead'>Get access to your Orders, Wishlist and Recommendations {loginuser && loginuser.username}</p>
         </div>
         <div className="details-container">
             <div className="data">
