@@ -5,7 +5,7 @@
 }
 .description{
     font-weight: 800;
-}
+}   
 .single-product{
     height: 40vh;
 }
@@ -13,4 +13,6 @@
 height: 150px;
 width: 150px;
 margin-top: 30px;
+z-index: 99999;
+position: relative;
 }

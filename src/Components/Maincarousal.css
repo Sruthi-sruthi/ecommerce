@@ -1,6 +1,8 @@
 .carousal-image{
     width: 100vw;
     padding: 15px;
+    z-index: 4;
+    /* position: relative; */
 }
 
 

@@ -4,7 +4,7 @@
 .seller-nav{
     left: auto;
     bottom: auto;
-    right: 0px; 
+    /* right: 0px;  */
     background-color: green;
     display: flex;
     justify-content: space-around;
@@ -12,6 +12,7 @@
     position: fixed;
     width: 100vw;
     height: 8vh;
+    z-index: 100;
 }
 .flip-main{
     width: 75px;
@@ -44,7 +45,7 @@
 .button-section{
     display: flex;
 }
-.seller-login{
+.seller-name{
     padding: 7px 30px;
     font-size: 16px;
     font-weight: 550;

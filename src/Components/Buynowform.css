@@ -1,0 +1,24 @@
+.buynow-form{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40%;
+    margin-top: 100px;
+    width: 50vw;
+}
+.buynow-form input{
+    width: 300px;
+    height: 30px;
+    margin-top: 10px;
+    
+
+}
+/* .payments{
+    display: flex;
+    align-items: center;
+} */
+/* .radio-btn{
+    width: 15px!important;
+} */
+.buynow-form button{
+    width: 310px;
+}

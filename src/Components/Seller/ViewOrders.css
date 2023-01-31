@@ -1,0 +1,40 @@
+.order-table th {
+    background-color: #212529;
+    color: white;
+    text-transform: capitalize;
+    padding: 5px 50px;
+}
+
+.order-table tr:hover {
+    background-color: #e9ecef;
+}
+
+.order-table tr {
+    background-color: white;
+}
+
+.order-table td {
+    text-transform: capitalize;
+    padding: 10px 50px;
+}
+
+.order-table {
+    margin-left: 50px;
+}
+
+.shipped-btn {
+    margin: 15px 50px;
+    border: none;
+    text-transform: capitalize;
+    font-size: 15px;
+    background-color: #e9ecef;
+}
+
+.shipped-btn:hover{
+    background-color: white;
+
+}
+.orders{
+    text-align: center;
+    text-transform: uppercase;
+}

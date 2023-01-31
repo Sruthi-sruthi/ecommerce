@@ -15,9 +15,11 @@ export default function Home() {
     <Banner/>
     <Maincarousal/>
     <Bankimage/>
-    <ProductList/>
+    <ProductList category="electronics"/>
+    <ProductList category="fashion"/>
+    <ProductList category="kids"/>
     {/* <Product/> */}
-    <Fashionproduct/>
+    {/* <Fashionproduct/> */}
     {/* <Productitem/> */}
     </div>
   )

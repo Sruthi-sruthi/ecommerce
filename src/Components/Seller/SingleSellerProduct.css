@@ -1,0 +1,47 @@
+.single-product-item-container{
+    display: flex;
+    margin-top: 60px;
+    /* background-color: white; */
+}
+.single-product-image{
+    /* background: url("https://rukminim1.flixcart.com/image/416/416/xif0q/cases-covers/back-cover/h/r/p/opreno8-5g-4077-flipkart-smartbuy-original-imagge3t5yfynz3c.jpeg?q=70"); */
+    height: 400px;
+    width: 370px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* border: 1px solid rgb(186, 182, 182); */
+    margin-left: 20px;
+    background-color: white;
+    margin-top: 50px;
+    margin-left: 90px;
+}
+/* .single-product-image img{
+    width: 300px;
+    height: 400px;
+} */
+
+.product-btn{
+    display: flex;
+}
+.seller-btn{
+    width: 120px;
+    height: 30px;
+    margin:0px 10px;
+}
+
+.product-left-container{
+    height: 90vh;
+    background-color: white;
+    margin-left: 90px;
+}
+.product-right-container{
+    width: 60vw;
+    height: 90vh;
+    background-color: white;
+    padding-left: 10px;  
+    /* padding-top: 50px;    */
+}
+
+.product-right-container p{
+    text-transform: capitalize;
+}

@@ -1,0 +1,31 @@
+.seller-table {
+    margin-top: 90px;
+}
+
+.tab {
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 100px;
+    text-align: center;
+}
+
+.product-head {
+    text-align: center;
+}
+/* td:hover{
+    background-color: gray;
+    color: white;
+} */
+.view-btn:hover{
+    background-color: rgb(63, 89, 63);
+    color: white;
+    border: none;
+}
+.seller-table tr{
+    height: 40px;
+}
+.seller-table th{
+    text-transform: uppercase;
+    background-color: rgb(86, 94, 86);
+}

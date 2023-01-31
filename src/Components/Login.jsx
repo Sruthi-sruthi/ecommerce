@@ -23,6 +23,7 @@ let response=await loginUser(obj)
       alert(response.user.username)
       setloginuser(response.user)
       setusertype("user")
+      props.setopen(false)
     }else{
       alert(response.message)
     }

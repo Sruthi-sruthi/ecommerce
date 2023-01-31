@@ -1,13 +1,23 @@
+import { useNavigate, useLocation } from 'react-router-dom';
 import './Product.css'
-function Product(props){
-    return(
+function Product({ oneproduct }) {
+    const navigate = useNavigate();
+    
+    
+    function viewproduct() {
+        navigate("/productitem", { state: { oneproduct } })
+    }
+    console.log(oneproduct);
+    return (
         <>
-        <div className="single-products">
-    <img className="sub-carousal-image" src={props.productimage}/>
-    <h4 className='product-title'>{props.title}</h4>
-    <p className='price'>{props.price}</p>
-    <p className='description'>{props.description}</p>
-    </div>
+           {
+            oneproduct && 
+            <div className="single-products" onClick={viewproduct}>
+            <img className="sub-carousal-image" src={oneproduct.url} />
+            <h4 className='product-title'>{oneproduct.title}</h4>
+            <p className='price'>{oneproduct.mrp}</p>
+        </div>
+           }
         </>
     )
 }

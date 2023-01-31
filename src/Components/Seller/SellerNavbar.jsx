@@ -22,14 +22,18 @@ const{loginuser}=useContext(UserContext)
         {
             loginuser
             ?
-            <button>{loginuser.username}</button>
+            <>
+            <button className='seller-name'>{loginuser.username}</button>
+        <Link to="/seller/sellerproduct"><button className='start-seller'>view products</button></Link>
+        </>
             :
         <button className='seller-reg'>register as seller</button>
         }
        
         <Link to="/seller/addproduct"><button className='start-seller'>start selling</button></Link>
+        <Link to="/seller/vieworder"><button className='start-seller'>view orders</button></Link>
         
-
+        
         </div>
         </div>
         </>

@@ -1,0 +1,59 @@
+.first-section {
+    display: flex;
+    background-color: white;
+    height: 20vh;
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.giftbox {
+    height: 150px;
+    width: 150px;
+}
+.first-data{
+    margin: 20px 0px 0px 0px;
+}
+.first-data h2{
+color: #2874f0;
+}
+.first-data p{
+font-weight: 500;
+margin-top: -20px;
+}
+.second-section{
+    background-color: white;
+    height: 30vh;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding: 10px 0px 5px 30px;
+    margin-top: 10px;
+}
+.third-section{
+    display: flex;
+    background-color: white;
+    height: 30vh;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    padding-top: 30px;
+
+}
+.third-data{
+    margin-left: 50px;
+}
+.third-section img{
+    width: 150px;
+    height: 150px;
+    margin-left: 50px;
+    
+}
+.delivery{
+    display: flex;
+    margin-left: 100px;
+
+}
+.shipping{
+    color: #2874f0;
+    margin-top: 15px;
+    margin-right: 10px;
+}

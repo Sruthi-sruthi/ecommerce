@@ -3,6 +3,7 @@ import SellerNavbar from './SellerNavbar'
 import './AddProductPage.css'
 import { sellerAddProduct } from '../../services/api'
 import { UserContext } from '../../context/UserContext'
+import { useNavigate } from 'react-router-dom'
 
 function AddProductPage() {
 const{loginuser}=useContext(UserContext)
@@ -13,6 +14,9 @@ const{loginuser}=useContext(UserContext)
   const descriptionRef=useRef()
   const urlRef=useRef()
   const offerRef=useRef()
+  const categoryRef=useRef()
+  const navigate = useNavigate();
+
   async function addproduct(){
     let obj={
       title :titleRef.current.value,
@@ -21,6 +25,7 @@ const{loginuser}=useContext(UserContext)
       description:descriptionRef.current.value,
       url:urlRef.current.value,
       offer:offerRef.current.value,
+      category:categoryRef.current.value,
       Seller_id:loginuser._id,
       Seller_name:loginuser.username,
     }
@@ -29,6 +34,8 @@ const{loginuser}=useContext(UserContext)
     console.log(response.success);
     if(response.success){
       alert(response.message)
+    navigate("/seller/sellerproduct");
+
     }else{
       alert(response.message)
     }
@@ -46,6 +53,7 @@ const{loginuser}=useContext(UserContext)
             <input type="text" name="description" placeholder='description' ref={descriptionRef}/>
             <input type="text" name='url' placeholder='url' ref={urlRef}/>
             <input type="text" name="offer" placeholder='offer' ref={offerRef}/>
+            <input type="text" name="category" placeholder='category' ref={categoryRef} />
             <button className='seller-submit-btn' onClick={addproduct}>submit</button>
             
         </div>
