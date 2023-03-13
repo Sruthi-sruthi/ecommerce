@@ -1,12 +1,21 @@
 import './SellerNavbar.css'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/UserContext';
 import { useContext } from 'react';
 
 function SellerNavbar(){
    
-const{loginuser}=useContext(UserContext)
-    
+const{loginuser,setloginuser}=useContext(UserContext)
+const navigate = useNavigate();
+
+
+   
+function logout() {
+    setloginuser(null)
+    navigate("/seller")
+
+}
+
     return(
         <>
         <div className="seller-nav">
@@ -27,11 +36,16 @@ const{loginuser}=useContext(UserContext)
         <Link to="/seller/sellerproduct"><button className='start-seller'>view products</button></Link>
         </>
             :
-        <button className='seller-reg'>register as seller</button>
+        <Link to="/seller/signup"><button className='seller-reg'>register as seller</button></Link>
+        
         }
+        {/* <Link to="/seller/login"><button className='seller-reg'>Login</button></Link> */}
+
        
         <Link to="/seller/addproduct"><button className='start-seller'>start selling</button></Link>
         <Link to="/seller/vieworder"><button className='start-seller'>view orders</button></Link>
+        {loginuser && <button className='logout-btn' onClick={logout}>logout</button>}
+
         
         
         </div>

@@ -3,6 +3,7 @@ import Dialog from '@mui/material/Dialog';
 import './SellerSignup.css';
 import { useRef } from 'react';
 import { signupSeller } from '../../services/api';
+import { Link } from 'react-router-dom';
 
 
 function SellerSignup() {
@@ -46,7 +47,8 @@ function SellerSignup() {
                       Policy</span>
                         </p>    
                         <button className='signup-login-btn' onClick={dosignup}>continue</button>
-                        <button className='otp'>Existing User? Log In</button>
+                        <Link to="/seller/login"><button className='otp'>Existing User? Log In</button></Link>
+                        
 
 
             </div>

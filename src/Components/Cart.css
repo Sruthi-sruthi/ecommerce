@@ -170,3 +170,12 @@
 .cart-details h5{
     font-weight: 500;
 }
+.c-img{
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+}
+.cart-details{
+    padding-left: 20px;
+    padding-right: 20px;
+}

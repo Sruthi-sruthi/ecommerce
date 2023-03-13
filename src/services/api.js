@@ -207,3 +207,16 @@ export async function productcart(userid,productid){
         }
     }
 }
+
+
+export async function view_cart(userid){
+    try {
+      let response=await axios.get(baseurl+'/viewcart/'+userid)
+      return response.data
+      
+    } catch (error) {
+        return {
+            error: "Error"
+        } 
+    }
+}

@@ -8,11 +8,13 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import { DemoContext } from '../context/DemoContext';
 import { UserContext } from '../context/UserContext';
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 
 function Navbar() {
     const [open, setopen] = useState(false)
     const { loginuser, setloginuser } = useContext(UserContext)
+    const navigate = useNavigate();
+
 
     function openLogin() {
         setopen(true)
@@ -30,7 +32,15 @@ function Navbar() {
     function logout() {
         setloginuser(null)
     }
+   function cart(){
+    if(loginuser){
+        navigate("/cart")
+    }
+    else{
+        setopen(true)
+    }
 
+   }
     return (
         <>
             <div className="nav">
@@ -66,7 +76,7 @@ function Navbar() {
                 <p className='text'>More
                     <ArrowDropDownIcon />
                 </p>
-                <p className='text'>
+                <p className='text' onClick={cart}>
                     <ShoppingCartIcon />
                     Cart</p>
                 {/* <a href="">view orders</a> */}

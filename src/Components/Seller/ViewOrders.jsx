@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../../context/UserContext'
 import { orderStatus, sellerOrders } from '../../services/api'
+import SellerNavbar from './SellerNavbar'
 import './ViewOrders.css'
 
 
@@ -37,6 +38,7 @@ function ViewOrders() {
   }
   return (
     <>
+    <SellerNavbar/>
       <h2 className='orders'>view orders</h2>
       <table className='order-table' >
         <tr >

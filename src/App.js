@@ -17,6 +17,7 @@ import UserRoute from './Components/AuthRoutes/UserRoute';
 import Login from './Components/Login';
 import OrderedProduct from './Components/OrderedProduct';
 import ViewOrders from './Components/Seller/ViewOrders';
+import Placeorderform from './Components/Placeorderform';
 
 function App() {
   // const [demo,setdemo] = useState("hy")
@@ -31,10 +32,12 @@ function App() {
       <Route path='/productitem' element={<Productitem/>}/>
       <Route path='/buynow' element={<Buynowform/>}/>
       <Route path='/orderedproduct' element={<OrderedProduct/>}/>
+      <Route path='/placeorder' element={<Placeorderform/>}/>
+
       
       <Route path='/seller'>
-        <Route path='' exact element={<SellerRoute><SellerHomePage/></SellerRoute>}></Route>  
-        {/* <Route path='' exact element={<SellerHomePage/>}></Route> */}
+        {/* <Route path='' exact element={<SellerRoute><SellerHomePage/></SellerRoute>}></Route>   */}
+        <Route path='' exact element={<SellerHomePage/>}></Route>
         <Route path='addproduct' element={<SellerRoute><AddProductPage/></SellerRoute>}></Route>
         <Route path='login' element={<SellerLogin/>}></Route>
         <Route path='signup' element={<SellerSignup/>}></Route>
