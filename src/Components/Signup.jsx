@@ -48,7 +48,6 @@ export default function Signup({signopen,setsignopen}) {
                         <button className='login-btn' onClick={dosignup}>continue</button>
                         <button className='otp'>Existing User? Log In</button>
 
-
             </div>
             </div>
         </div>

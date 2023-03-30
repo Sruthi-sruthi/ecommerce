@@ -34,7 +34,6 @@ const{loginuser}=useContext(UserContext)
     console.log(response.success);
     if(response.success){
       alert(response.message)
-    navigate("/seller/sellerproduct");
 
     }else{
       alert(response.message)

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './SingleSellerProduct.css'
 import SellerNavbar from './SellerNavbar';
-import {getDeleteProduct, getSingleProduct } from '../../services/api';
+import { getDeleteProduct, getSingleProduct } from '../../services/api';
 import { useNavigate, useParams } from 'react-router-dom';
 
 
@@ -22,22 +22,22 @@ function SingleSellerProduct() {
   }, [])
 
 
- async function deleteProduct(){
-  let {success,message}=await getDeleteProduct(id)
-  if(success){
-    alert(message)
-     navigate("/seller/sellerproduct");
-  }else{
-    alert("cannot delete product")
+  async function deleteProduct() {
+    let { success, message } = await getDeleteProduct(id)
+    if (success) {
+      alert(message)
+      navigate("/seller/sellerproduct");
+    } else {
+      alert("cannot delete product")
+    }
   }
-}
 
 
- function updateProducts(){
-  navigate("/seller/updateproduct",{state:{singleproducts}})
-  
- }
-  
+  function updateProducts() {
+    navigate("/seller/updateproduct", { state: { singleproducts } })
+
+  }
+
   return (
     <>
       <SellerNavbar />
